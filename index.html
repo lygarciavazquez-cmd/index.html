@@ -536,19 +536,19 @@
             { cat: 'PHAKIC', name: 'Eyecryl Phakic alta potencia (tor)', price: 860.00, desc: 'De +3D a +10D y de -6,50D a -25D con CYL de hasta +5D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
             { cat: 'PHAKIC', name: 'Eyecryl Phakic Custom', price: 1275.00, desc: 'sph/tor (tallas 11/11,5/14/14,5) y potencias fuera del rango +10 a -25D y mayores de +5D de cilindro. Todas llevan puerto central.' },
             // OPTIFLEX
-            { cat: 'OPTIFLEX', name: 'Optiflex Trio 3FLA6', price: 300.00, desc: 'Trifocal hidrofóbica de 3 piezas para máxima estabilidad en el saco capsular.' },
-            { cat: 'OPTIFLEX', name: 'Optiflex Trio TORICA', price: 400.00, desc: 'Corrección trifocal y astigmática combinada en material hidrofóbico avanzado.' },
-            { cat: 'OPTIFLEX', name: 'Optiflex Trio Plus', price: 375.00, new: true, desc: 'Lente trifocal de última generación con óptica optimizada Glisten-Free.' },
-            { cat: 'OPTIFLEX', name: 'Optiflex Xtense Comfort Plus', price: 375.00, new: true, desc: 'Lente EDOF (Rango Extendido) para una visión continua de alta calidad de lejos a cerca.' },
+            { cat: 'TRIFOCAL', name: 'Optiflex Trio 3FLA6', price: 300.00, desc: 'Trifocal hidrofóbica de 3 piezas para máxima estabilidad en el saco capsular.' },
+            { cat: 'TRIFOCAL', name: 'Optiflex Trio TORICA', price: 400.00, desc: 'Corrección trifocal y astigmática combinada en material hidrofóbico avanzado.' },
+            { cat: 'TRIFOCAL', name: 'Optiflex Trio Plus', price: 375.00, new: true, desc: 'Lente trifocal de última generación con óptica optimizada Glisten-Free.' },
+            { cat: 'Continuous Vision', name: 'Optiflex Xtense Comfort Plus', price: 375.00, new: true, desc: 'Lente EDOF (Rango Extendido) para una visión continua de alta calidad de lejos a cerca.' },
             // MONOFOCALES EYECRYL
-            { cat: 'EYECRYL', name: 'Eyecryl SERT', price: 105.00, desc: 'Monofocal asférica precargada en sistema de inyección automatizado.' },
-            { cat: 'EYECRYL', name: 'Eyecryl SERT Toric cyl 1', price: 200.00, desc: 'Corrección astigmática básica en sistema precargado de micro-incisión.' },
-            { cat: 'EYECRYL', name: 'Eyecryl SERT Toric otros cyls', price: 215.00, desc: 'Lente tórica precargada para cilindros superiores a 1.50D.' },
-            { cat: 'EYECRYL', name: 'Eyecryl Actv', price: 200.00, desc: 'Óptica asférica HD diseñada para mejorar la sensibilidad al contraste.' },
-            { cat: 'EYECRYL', name: 'Eyecryl Plus (hydrophobic not preloaded)', price: 45.00, desc: 'Lente hidrofóbica estándar de una pieza para carga manual.' },
-            { cat: 'EYECRYL', name: 'Eyecryl 600 (hydrophilic non preloaded)', price: 35.00, desc: 'Lente hidrofílica clásica con diseño de bordes cuadrados.' },
-            { cat: 'EYECRYL', name: 'Eyecryl Comfort NY (preloaded)', price: 55.00, desc: 'Monofocal precargada con filtro amarillo natural para protección macular.' },
-            { cat: 'EYECRYL', name: 'Eyecryl Toric', price: 200.00, desc: 'Lente tórica para carga manual indicada en corrección de astigmatismo corneal.' },
+            { cat: 'EDOF', name: 'Eyecryl SERT', price: 105.00, desc: 'Monofocal asférica precargada en sistema de inyección automatizado.' },
+            { cat: 'EDOF', name: 'Eyecryl SERT Toric cyl 1', price: 200.00, desc: 'Corrección astigmática básica en sistema precargado de micro-incisión.' },
+            { cat: 'EDOF', name: 'Eyecryl SERT Toric otros cyls', price: 215.00, desc: 'Lente tórica precargada para cilindros superiores a 1.50D.' },
+            { cat: 'Multifocal', name: 'Eyecryl Actv', price: 200.00, desc: 'Óptica asférica HD diseñada para mejorar la sensibilidad al contraste.' },
+            { cat: 'MONOFOCAL', name: 'Eyecryl Plus (hydrophobic not preloaded)', price: 45.00, desc: 'Lente hidrofóbica estándar de una pieza para carga manual.' },
+            { cat: 'MONOFOCAL', name: 'Eyecryl 600 (hydrophilic non preloaded)', price: 35.00, desc: 'Lente hidrofílica clásica con diseño de bordes cuadrados.' },
+            { cat: 'MONOFOCAL', name: 'Eyecryl Comfort NY (preloaded)', price: 55.00, desc: 'Monofocal precargada con filtro amarillo natural para protección macular.' },
+            { cat: 'MONOFOCAL', name: 'Eyecryl Toric', price: 200.00, desc: 'Lente tórica para carga manual indicada en corrección de astigmatismo corneal.' },
             // OVDs / VISCOELÁSTICOS
             { cat: 'OVDs', name: 'Eyevisc 2% 2ml PFS', price: 7.70, desc: 'HPMC dispersivo de alta pureza para protección endotelial.' },
             { cat: 'OVDs', name: 'Bio Hyalur 1ml PFS', price: 9.90, desc: 'Viscoelástico cohesivo estándar al 1% de hialuronato sódico.' },
@@ -558,18 +558,20 @@
             { cat: 'OVDs', name: 'Bio Hyalur Duo (10% and 24%) 1ml PFS', price: 20.00, desc: 'Pack combinado Cohesivo + Dispersivo para técnica de soft-shell.' },
             { cat: 'OVDs', name: 'Bio Hyalur CS 1ml PFS', price: 23.00, desc: 'Fórmula con Condroitín Sulfato para máxima adhesión celular.' },
             { cat: 'OVDs', name: 'Bio Hyalur LVD 1ml PFS', price: 24.50, desc: 'Viscoelástico dispersivo avanzado de baja viscosidad.' },
-            // RETINA / INSTRUMENTAL
-            { cat: 'RETINA', name: 'Bio Blue 1ml PFS - SKU FG0275', price: 9.50, desc: 'Azul de Trypan premium para tinción de la cápsula anterior.' },
-            { cat: 'MISC', name: 'Biovision PMMA CTR (Clear)', price: 20.00, desc: 'Anillo de tensión capsular transparente.' },
-            { cat: 'MISC', name: 'Biovision PMMA CTR (Blue)', price: 20.00, desc: 'Anillo de tensión capsular azul para mayor visibilidad.' },
-            { cat: 'MISC', name: 'Iris Retractors', price: 40.00, desc: 'Set de 5 ganchos de iris estériles en estuche.' },
-            { cat: 'RETINA', name: 'BioBlue 90 Plus (ILM blue equivalent)', price: 45.00, desc: 'Tinción selectiva de la Membrana Limitante Interna.' },
-            { cat: 'RETINA', name: 'Bio Blue DUO (ILM ERM DUO equivalent)', price: 55.00, desc: 'Doble tinción para Limitante Interna y Membranas Epirretinianas.' },
-            { cat: 'RETINA', name: 'BioSil 10ml', price: 59.00, desc: 'Aceite de silicona ultrapuro de 1000 cSt o 5000 cSt.' },
-            { cat: 'RETINA', name: 'Biosil F 10ml', price: 59.00, desc: 'Aceite de silicona fluido de rápida inyección.' },
-            { cat: 'RETINA', name: 'Bio Octane', price: 65.00, desc: 'Perfluoroctano premium para reaplicación de retina.' },
-            { cat: 'RETINA', name: 'Bio Decaline', price: 65.00, desc: 'Perfluordecalina de alta densidad.' },
-            { cat: 'MISC', name: 'Bioring (par)', price: 265.00, desc: 'Anillo especializado para indentación escleral o vítrea.' }
+            // COLORANTES / OTROS
+            { cat: 'COLORANTES', name: 'Bio Blue 1ml PFS - SKU FG0275', price: 9.50, desc: 'Azul de Trypan premium para tinción de la cápsula anterior.' },
+            { cat: 'OTROS', name: 'Biovision PMMA CTR (Clear)', price: 20.00, desc: 'Anillo de tensión capsular transparente.' },
+            { cat: 'OTROS', name: 'Biovision PMMA CTR (Blue )', price: 20.00, desc: 'Anillo de tensión capsular azul para mayor visibilidad.' },
+            { cat: 'OTROS', name: 'Iris Retractors', price: 40.00, desc: 'Set de 5 ganchos de iris estériles en estuche.' },
+            // VR
+            { cat: 'VR', name: 'BioBlue 90 Plus (ILM blue equivalent)', price: 45.00, desc: 'Tinción selectiva de la Membrana Limitante Interna.' },
+            { cat: 'VR', name: 'Bio Blue DUO (ILM ERM DUO equivalent)', price: 55.00, desc: 'Doble tinción para Limitante Interna y Membranas Epirretinianas.' },
+            { cat: 'VR', name: 'BioSil 10ml', price: 59.00, desc: 'Aceite de silicona ultrapuro de 1000 cSt o 5000 cSt.' },
+            { cat: 'VR', name: 'Biosil F 10ml', price: 59.00, desc: 'Aceite de silicona fluido de rápida inyección.' },
+            { cat: 'VR', name: 'Bio Octane', price: 65.00, desc: 'Perfluoroctano premium para reaplicación de retina.' },
+            { cat: 'VR', name: 'Bio Decaline', price: 65.00, desc: 'Perfluordecalina de alta densidad.' },
+            // BIORING
+            { cat: 'BIORING', name: 'Bioring (par)', price: 265.00, desc: 'Anillo especializado para indentación escleral o vítrea.' }
         ];
 
         document.addEventListener('DOMContentLoaded', function() {
