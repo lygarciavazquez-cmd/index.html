@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biotech Iberia | Acordo Innova Ocular 2026</title>
-    <!-- Tailwind CSS para design profissional -->
+    <title>Biotech Iberia | Acuerdo Innova Ocular 2026</title>
+    <!-- Tailwind CSS para diseño profesional -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide para ícones -->
+    <!-- Lucide para iconos -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; margin: 0; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        /* Botão de navegação ativo */
+        /* Botón de navegación activo */
         .nav-btn.active { background-color: #2563eb; color: white; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2); }
         .animate-in { animation: fadeIn 0.4s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -21,37 +21,49 @@
         .logo-container img { max-height: 60px; width: auto; }
         .product-img { transition: transform 0.3s ease; }
         .product-img:hover { transform: scale(1.05); }
+        
+        /* Estilos para el slider del simulador */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 24px; width: 24px; border-radius: 50%;
+            background: #2563eb; cursor: pointer; border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: -9px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px;
+        }
     </style>
 </head>
 <body class="p-4 md:p-10 pb-20">
 
     <div class="max-w-6xl mx-auto">
-        <!-- CABEÇALHO CORPORATIVO -->
+        <!-- CABECERA CORPORATIVA -->
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-8">
             <div class="flex flex-col gap-6">
                 <div class="logo-container">
-                    <!-- Logótipo Biotech Iberia -->
+                    <!-- Logotipo Biotech Iberia -->
                     <img src="logo_biotech.png" alt="Biotech Iberia" onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden');">
                     <div id="fallback-logo" class="hidden font-black text-3xl text-slate-800 tracking-tighter uppercase">Biotech <span class="text-blue-600">Iberia</span></div>
                 </div>
                 <div>
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded mb-2 shadow-lg shadow-blue-100">
-                        <i data-lucide="shield-check" class="w-3 h-3"></i> Acordo Estratégico 2026
+                        <i data-lucide="shield-check" class="w-3 h-3"></i> Acuerdo Estratégico 2026
                     </div>
                     <h1 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter leading-none">Innova Ocular</h1>
                 </div>
             </div>
             
-            <!-- NAVEGAÇÃO -->
+            <!-- NAVEGACIÓN -->
             <div class="flex bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200 overflow-x-auto no-scrollbar w-full lg:w-auto">
-                <button onclick="showTab('overview')" id="btn-overview" class="nav-btn active px-8 py-3 rounded-xl text-xs font-black transition-all uppercase whitespace-nowrap tracking-tight">Estratégia</button>
+                <button onclick="showTab('overview')" id="btn-overview" class="nav-btn active px-8 py-3 rounded-xl text-xs font-black transition-all uppercase whitespace-nowrap tracking-tight">Estrategia</button>
                 <button onclick="showTab('catalog')" id="btn-catalog" class="nav-btn px-8 py-3 rounded-xl text-xs font-black text-slate-400 hover:bg-slate-50 transition-all uppercase whitespace-nowrap tracking-tight">Tarifa 2026</button>
-                <button onclick="showTab('tech')" id="btn-tech" class="nav-btn px-8 py-3 rounded-xl text-xs font-black text-slate-400 hover:bg-slate-50 transition-all uppercase whitespace-nowrap tracking-tight">Especificações</button>
+                <button onclick="showTab('tech')" id="btn-tech" class="nav-btn px-8 py-3 rounded-xl text-xs font-black text-slate-400 hover:bg-slate-50 transition-all uppercase whitespace-nowrap tracking-tight">Especificaciones</button>
             </div>
         </div>
 
-        <!-- ABA 1: ESTRATÉGIA -->
+        <!-- PESTAÑA 1: ESTRATEGIA -->
         <div id="overview" class="tab-content active space-y-8 animate-in">
+            <!-- KPIs -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex items-center justify-between">
                     <div>
@@ -76,7 +88,7 @@
                 </div>
             </div>
 
-            <!-- COMPROMISSO LOGÍSTICO -->
+            <!-- LOGÍSTICA Y PRODUCTO DESTACADO -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 bg-blue-600 p-10 rounded-[48px] text-white shadow-xl shadow-blue-100 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-10 opacity-10">
@@ -92,23 +104,64 @@
                                 <p class="text-2xl font-black italic tracking-tight">Entrega Garantizada 24 Horas</p>
                             </div>
                             <div class="bg-white/10 p-6 rounded-3xl backdrop-blur-md border border-white/20">
-                                <h4 class="text-blue-200 text-[10px] font-black uppercase mb-2">Pedidos e Apoio</h4>
+                                <h4 class="text-blue-200 text-[10px] font-black uppercase mb-2">Pedidos y Soporte</h4>
                                 <a href="mailto:pedidos.iberia@biotechhealthcare.com" class="text-sm font-black hover:underline block truncate">pedidos.iberia@biotechhealthcare.com</a>
-                                <p class="text-[10px] text-blue-200 mt-1 uppercase italic">Resto de produtos: consultar prazo</p>
+                                <p class="text-[10px] text-blue-200 mt-1 uppercase italic font-bold">Resto de productos: Consultar plazo</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Miniatura Estratégica da Lente Phakic -->
-                <div class="bg-white p-6 rounded-[48px] border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+                <!-- Miniatura Estratégica de la Lente Phakic -->
+                <div class="bg-white p-6 rounded-[48px] border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center group">
                     <img src="ChatGPT Image 3 feb 2026, 10_08_45.jpg" alt="Eyecryl Phakic" class="w-32 h-auto product-img mb-4 drop-shadow-md">
-                    <p class="text-[10px] font-black text-blue-600 uppercase tracking-widest">Produto Destaque</p>
+                    <p class="text-[10px] font-black text-blue-600 uppercase tracking-widest">Producto Estrella</p>
                     <h4 class="font-black text-slate-800 text-sm">Eyecryl Phakic</h4>
+                </div>
+            </div>
+
+            <!-- SIMULADOR DE RAPPEL -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-slate-900 p-10 rounded-[48px] text-white shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px] -mr-20 -mt-20"></div>
+                    <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mb-6">Simulador de Facturación Anual</p>
+                    <h2 id="sales-display" class="text-6xl font-black mb-10 tracking-tighter tabular-nums">750.000 €</h2>
+                    <input type="range" id="sales-slider" min="100000" max="2500000" step="50000" value="750000" oninput="updateSimulator(this.value)" class="mb-12">
+                    <div class="grid grid-cols-2 gap-8 pt-10 border-t border-slate-800">
+                        <div>
+                            <p class="text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest">Abono Rappel</p>
+                            <p id="rappel-cash" class="text-3xl font-black text-emerald-400 tabular-nums tracking-tighter">18.750 €</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest">Porcentaje</p>
+                            <p id="rappel-percent" class="text-3xl font-black text-blue-500 tracking-tighter">2.5%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm flex flex-col justify-center">
+                    <h3 class="font-black text-xl text-slate-800 mb-6 uppercase tracking-tight flex items-center gap-3">
+                        <i data-lucide="calculator" class="text-blue-600"></i> Condiciones de Rappel 2026
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-3 bg-amber-50 text-amber-600 rounded-2xl"><i data-lucide="alert-circle" size="20"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-800">Rappel por Cuenta (Centro)</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Adicionalmente, se aplicará un rappel de hasta el <strong class="text-slate-900">5,50%</strong> si el centro individual supera los 150.000 € anuales.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="p-3 bg-blue-50 text-blue-600 rounded-2xl"><i data-lucide="info" size="20"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-800">Escalado de Grupo</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">El porcentaje de rappel se ajusta dinámicamente según el volumen total consolidado del grupo Innova Ocular.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- ABA 2: TARIFA 2026 -->
+        <!-- PESTAÑA 2: TARIFA 2026 -->
         <div id="catalog" class="tab-content space-y-8 animate-in">
             <div class="bg-white rounded-[40px] border border-slate-100 shadow-sm overflow-hidden">
                 <div class="p-8 border-b flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -123,8 +176,8 @@
                     <table class="w-full text-left border-collapse">
                         <thead class="bg-slate-50 border-b">
                             <tr>
-                                <th class="p-8 text-[11px] font-black text-slate-400 uppercase tracking-widest">Produto</th>
-                                <th class="p-8 text-[11px] font-black text-slate-400 uppercase tracking-widest">Descrição Técnica / Rango</th>
+                                <th class="p-8 text-[11px] font-black text-slate-400 uppercase tracking-widest">Producto</th>
+                                <th class="p-8 text-[11px] font-black text-slate-400 uppercase tracking-widest">Descripción Técnica / Rango</th>
                                 <th class="p-8 text-[11px] font-black text-slate-400 uppercase tracking-widest text-right">Precio Neto (€)</th>
                             </tr>
                         </thead>
@@ -139,10 +192,10 @@
             </div>
         </div>
 
-        <!-- ABA 3: ESPECIFICAÇÕES TÉCNICAS -->
+        <!-- PESTAÑA 3: ESPECIFICACIONES TÉCNICAS -->
         <div id="tech" class="tab-content space-y-10 animate-in">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Ficha Phakic com Imagem Estratégica -->
+                <!-- Ficha Phakic con Imagen -->
                 <div class="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm relative overflow-hidden">
                     <div class="flex justify-between items-start mb-8 border-b pb-6 relative z-10">
                         <div>
@@ -159,7 +212,7 @@
                             </div>
                             <div class="p-3 bg-slate-50 rounded-xl flex justify-between items-center border border-indigo-100">
                                 <span class="text-[9px] font-black uppercase text-slate-400">Alta Potencia (TOR)</span>
-                                <span class="text-[10px] font-bold text-slate-700">CYL hasta +5D</span>
+                                <span class="text-[10px] font-bold text-slate-700">Cilindros hasta +5D</span>
                             </div>
                             <div class="p-3 bg-slate-50 rounded-xl flex justify-between items-center border border-slate-100">
                                 <span class="text-[9px] font-black uppercase text-slate-400">Baja Potencia</span>
@@ -183,9 +236,9 @@
                         <i data-lucide="infinity" class="text-amber-600" size="32"></i>
                     </div>
                     <ul class="space-y-4 text-sm font-medium text-slate-600">
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Visão contínua: Rango visual estendido real sem degraus.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Tecnologia não difrativa: Elimina halos e glare noturno.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Material Hydrophobic Glisten-free para transparência total.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Visión continua: Rango visual extendido real sin escalones.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Tecnología no difractiva: Elimina halos y deslumbramientos nocturnos.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Material Hidrofóbico libre de vacuolas para transparencia total.</li>
                     </ul>
                 </div>
 
@@ -199,9 +252,9 @@
                         <i data-lucide="layers" class="text-indigo-600" size="32"></i>
                     </div>
                     <ul class="space-y-4 text-sm font-medium text-slate-600">
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Reparto energético equilibrado: 50% longe / 25% interm. / 25% perto.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Filtro de luz azul integrado para proteção da mácula.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Desenho asférico para sensibilidade ao contraste superior.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Reparto energético equilibrado: 50% lejos / 25% interm. / 25% cerca.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Filtro de luz azul integrado para protección de la mácula.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Diseño asférico para sensibilidad al contraste superior.</li>
                     </ul>
                 </div>
 
@@ -215,9 +268,9 @@
                         <i data-lucide="box" class="text-emerald-600" size="32"></i>
                     </div>
                     <ul class="space-y-4 text-sm font-medium text-slate-600">
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Sistema precarregado "One-step": Segurança e rapidez cirúrgica.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Incisão micro de 2.2mm para estabilidade astigmática.</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Portfólio completo disponível em versão Monofocal e EDOF.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Sistema precargado "One-step": Seguridad y rapidez quirúrgica.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Incisión micro de 2.2mm para estabilidad astigmática.</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="text-emerald-500 w-4 h-4 shrink-0"></i> Portfolio completo disponible en versión Monofocal y EDOF.</li>
                     </ul>
                 </div>
             </div>
@@ -225,7 +278,15 @@
     </div>
 
     <script>
-        // DADOS DA TARIFA ATUALIZADOS COM DESCRIÇÕES
+        // DATOS DE RAPPEL
+        const rappelScale = [
+            { limit: 250000, rate: 0.015 }, { limit: 500000, rate: 0.020 },
+            { limit: 750000, rate: 0.025 }, { limit: 1000000, rate: 0.030 },
+            { limit: 1250000, rate: 0.035 }, { limit: 1500000, rate: 0.040 },
+            { limit: 1750000, rate: 0.045 }, { limit: 2000000, rate: 0.050 }
+        ];
+
+        // DATOS DE TARIFA CON DESCRIIPCIONES
         const products = [
             { cat: 'PHAKIC', name: 'Eyecryl Phakic alta potencia (sph)', price: 500, desc: 'Lente plegable de cámara posterior para miopías e hipermetropías extremas.' },
             { cat: 'PHAKIC', name: 'Eyecryl Phakic alta potencia (tor)', price: 800, desc: 'Corrección premium de astigmatismo elevado con cilindros hasta +5D.' },
@@ -254,13 +315,14 @@
             { cat: 'OTROS', name: 'Iris Retractors', price: 40, desc: 'Ganchos flexibles para dilatación pupilar mecánica (caja 5 uds).' }
         ];
 
-        // INICIALIZAÇÃO
+        // INICIALIZACIÓN
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
             renderProducts();
+            updateSimulator(750000);
         });
 
-        // NAVEGAÇÃO ENTRE ABAS
+        // NAVEGACIÓN ENTRE ABAS
         function showTab(id) {
             document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(b => {
@@ -276,14 +338,32 @@
             lucide.createIcons();
         }
 
-        // GERAÇÃO DA TABELA DE PREÇOS
+        // FUNCIÓN DEL SIMULADOR
+        function updateSimulator(val) {
+            const sales = parseInt(val);
+            document.getElementById('sales-display').innerText = sales.toLocaleString() + ' €';
+            
+            let rate = 0;
+            for (let i = rappelScale.length - 1; i >= 0; i--) {
+                if (sales >= rappelScale[i].limit) {
+                    rate = rappelScale[i].rate;
+                    break;
+                }
+            }
+            
+            const cash = sales * rate;
+            document.getElementById('rappel-percent').innerText = (rate * 100).toFixed(1) + '%';
+            document.getElementById('rappel-cash').innerText = cash.toLocaleString() + ' €';
+        }
+
+        // GENERACIÓN DE LA TABLA DE PRECIOS
         function renderProducts() {
             const list = document.getElementById('product-list');
             if (!list) return;
             list.innerHTML = products.map(p => `
-                <tr class="hover:bg-slate-50 transition-colors">
+                <tr class="hover:bg-slate-50 transition-colors text-sm">
                     <td class="p-8">
-                        <div class="font-black text-slate-800 text-sm uppercase tracking-tight">${p.name}</div>
+                        <div class="font-black text-slate-800 uppercase tracking-tight">${p.name}</div>
                         <span class="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-black uppercase tracking-tighter">${p.cat}</span>
                     </td>
                     <td class="p-8">
