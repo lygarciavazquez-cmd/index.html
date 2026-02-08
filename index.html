@@ -494,11 +494,11 @@
                                 <input type="number" id="qty-gorros" placeholder="Cant" class="w-16 text-center text-xs py-2 border-slate-200 rounded-lg">
                             </div>
                             <div class="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                                <label class="text-xs font-black flex items-center gap-3 cursor-pointer"><input type="checkbox" name="mkt-item" value="Maqueta de ojos" class="w-5 h-5 rounded"> Maqueta Ojo</label>
+                                <label class="text-xs font-black flex items-center gap-3 cursor-pointer"><input type="checkbox" name="mkt-item" value="Maqueta Ojo" class="w-5 h-5 rounded"> Maqueta Ojo</label>
                                 <input type="number" id="qty-maqueta" placeholder="Cant" class="w-16 text-center text-xs py-2 border-slate-200 rounded-lg">
                             </div>
                             <div class="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                                <label class="text-xs font-black flex items-center gap-3 cursor-pointer"><input type="checkbox" name="mkt-item" value="Material Web" class="w-5 h-5 rounded"> Material para web</label>
+                                <label class="text-xs font-black flex items-center gap-3 cursor-pointer"><input type="checkbox" name="mkt-item" value="Material para web" class="w-5 h-5 rounded"> Material para web</label>
                                 <input type="number" id="qty-web" placeholder="Cant" class="w-16 text-center text-xs py-2 border-slate-200 rounded-lg">
                             </div>
                         </div>
@@ -530,19 +530,46 @@
             </div>`;
 
         const products = [
+            // FÁQUICAS (Orden Corregido: Baja, Alta SPH, Alta TOR, Custom)
             { cat: 'PHAKIC', name: 'Eyecryl Phakic baja potencia (esf/tor)', price: 500.00, desc: 'De +2,75D a - 6D con o sin CYL de hasta +5D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
-            { cat: 'PHAKIC', name: 'Eyecryl Phakic Alta potencia (esf)', price: 550.00, desc: 'De +3D a +10D y de -6,50D a -25D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
-            { cat: 'PHAKIC', name: 'Eyecryl Phakic Alta potencia (tor)', price: 860.00, desc: 'De +3D a +10D y de -6,50D a -25D con CYL de hasta +5D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
-            { cat: 'PHAKIC', name: 'Eyecryl Phakic custom', price: 1275.00, desc: 'sph/tor (tallas 11/11,5/14/14,5) y potencias fuera del rango +10 a -25D y mayores de +5D de cilindro. Todas llevan puerto central.' },
+            { cat: 'PHAKIC', name: 'Eyecryl Phakic alta potencia (sph)', price: 550.00, desc: 'De +3D a +10D y de -6,50D a -25D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
+            { cat: 'PHAKIC', name: 'Eyecryl Phakic alta potencia (tor)', price: 860.00, desc: 'De +3D a +10D y de -6,50D a -25D con CYL de hasta +5D (tallas 12/12.5/13/13.5). Todas llevan puerto central, incluidas las hipermetrópicas.' },
+            { cat: 'PHAKIC', name: 'Eyecryl Phakic Custom', price: 1275.00, desc: 'sph/tor (tallas 11/11,5/14/14,5) y potencias fuera del rango +10 a -25D y mayores de +5D de cilindro. Todas llevan puerto central.' },
+            // OPTIFLEX
             { cat: 'OPTIFLEX', name: 'Optiflex Trio 3FLA6', price: 300.00, desc: 'Trifocal hidrofóbica de 3 piezas para máxima estabilidad en el saco capsular.' },
             { cat: 'OPTIFLEX', name: 'Optiflex Trio TORICA', price: 400.00, desc: 'Corrección trifocal y astigmática combinada en material hidrofóbico avanzado.' },
             { cat: 'OPTIFLEX', name: 'Optiflex Trio Plus', price: 375.00, new: true, desc: 'Lente trifocal de última generación con óptica optimizada Glisten-Free.' },
             { cat: 'OPTIFLEX', name: 'Optiflex Xtense Comfort Plus', price: 375.00, new: true, desc: 'Lente EDOF (Rango Extendido) para una visión continua de alta calidad de lejos a cerca.' },
+            // MONOFOCALES EYECRYL
             { cat: 'EYECRYL', name: 'Eyecryl SERT', price: 105.00, desc: 'Monofocal asférica precargada en sistema de inyección automatizado.' },
+            { cat: 'EYECRYL', name: 'Eyecryl SERT Toric cyl 1', price: 200.00, desc: 'Corrección astigmática básica en sistema precargado de micro-incisión.' },
+            { cat: 'EYECRYL', name: 'Eyecryl SERT Toric otros cyls', price: 215.00, desc: 'Lente tórica precargada para cilindros superiores a 1.50D.' },
+            { cat: 'EYECRYL', name: 'Eyecryl Actv', price: 200.00, desc: 'Óptica asférica HD diseñada para mejorar la sensibilidad al contraste.' },
+            { cat: 'EYECRYL', name: 'Eyecryl Plus (hydrophobic not preloaded)', price: 45.00, desc: 'Lente hidrofóbica estándar de una pieza para carga manual.' },
+            { cat: 'EYECRYL', name: 'Eyecryl 600 (hydrophilic non preloaded)', price: 35.00, desc: 'Lente hidrofílica clásica con diseño de bordes cuadrados.' },
+            { cat: 'EYECRYL', name: 'Eyecryl Comfort NY (preloaded)', price: 55.00, desc: 'Monofocal precargada con filtro amarillo natural para protección macular.' },
             { cat: 'EYECRYL', name: 'Eyecryl Toric', price: 200.00, desc: 'Lente tórica para carga manual indicada en corrección de astigmatismo corneal.' },
+            // OVDs / VISCOELÁSTICOS
             { cat: 'OVDs', name: 'Eyevisc 2% 2ml PFS', price: 7.70, desc: 'HPMC dispersivo de alta pureza para protección endotelial.' },
-            { cat: 'OVDs', name: 'Bio Hyalur Duo 1ml PFS', price: 20.00, desc: 'Pack combinado Cohesivo + Dispersivo para técnica de soft-shell.' },
-            { cat: 'RETINA', name: 'Bio Blue DUO', price: 55.00, desc: 'Doble tinción ILM y Membranas Epirretinianas.' }
+            { cat: 'OVDs', name: 'Bio Hyalur 1ml PFS', price: 9.90, desc: 'Viscoelástico cohesivo estándar al 1% de hialuronato sódico.' },
+            { cat: 'OVDs', name: 'Bio Hyalur Plus 1ml PFS', price: 10.80, desc: 'Cohesivo Plus con mayor peso molecular para mantenimiento de cámara.' },
+            { cat: 'OVDs', name: 'Bio Hyalur HV 1ml PFS', price: 12.00, desc: 'Hialuronato de Alta Viscosidad para casos quirúrgicos complejos.' },
+            { cat: 'OVDs', name: 'Bio Hyalur SV 1ml PFS', price: 12.50, desc: 'Super Viscosidad diseñado para fractura de núcleos duros.' },
+            { cat: 'OVDs', name: 'Bio Hyalur Duo (10% and 24%) 1ml PFS', price: 20.00, desc: 'Pack combinado Cohesivo + Dispersivo para técnica de soft-shell.' },
+            { cat: 'OVDs', name: 'Bio Hyalur CS 1ml PFS', price: 23.00, desc: 'Fórmula con Condroitín Sulfato para máxima adhesión celular.' },
+            { cat: 'OVDs', name: 'Bio Hyalur LVD 1ml PFS', price: 24.50, desc: 'Viscoelástico dispersivo avanzado de baja viscosidad.' },
+            // RETINA / INSTRUMENTAL
+            { cat: 'RETINA', name: 'Bio Blue 1ml PFS - SKU FG0275', price: 9.50, desc: 'Azul de Trypan premium para tinción de la cápsula anterior.' },
+            { cat: 'MISC', name: 'Biovision PMMA CTR (Clear)', price: 20.00, desc: 'Anillo de tensión capsular transparente.' },
+            { cat: 'MISC', name: 'Biovision PMMA CTR (Blue)', price: 20.00, desc: 'Anillo de tensión capsular azul para mayor visibilidad.' },
+            { cat: 'MISC', name: 'Iris Retractors', price: 40.00, desc: 'Set de 5 ganchos de iris estériles en estuche.' },
+            { cat: 'RETINA', name: 'BioBlue 90 Plus (ILM blue equivalent)', price: 45.00, desc: 'Tinción selectiva de la Membrana Limitante Interna.' },
+            { cat: 'RETINA', name: 'Bio Blue DUO (ILM ERM DUO equivalent)', price: 55.00, desc: 'Doble tinción para Limitante Interna y Membranas Epirretinianas.' },
+            { cat: 'RETINA', name: 'BioSil 10ml', price: 59.00, desc: 'Aceite de silicona ultrapuro de 1000 cSt o 5000 cSt.' },
+            { cat: 'RETINA', name: 'Biosil F 10ml', price: 59.00, desc: 'Aceite de silicona fluido de rápida inyección.' },
+            { cat: 'RETINA', name: 'Bio Octane', price: 65.00, desc: 'Perfluoroctano premium para reaplicación de retina.' },
+            { cat: 'RETINA', name: 'Bio Decaline', price: 65.00, desc: 'Perfluordecalina de alta densidad.' },
+            { cat: 'MISC', name: 'Bioring (par)', price: 265.00, desc: 'Anillo especializado para indentación escleral o vítrea.' }
         ];
 
         document.addEventListener('DOMContentLoaded', function() {
